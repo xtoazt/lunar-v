@@ -91,8 +91,8 @@ mainForm.addEventListener('submit', async (event) => {
 
   const inputVal = inputField.value.trim();
 
-  if (inputVal.startsWith('lunar://')) {
-    LunarPaths(inputVal);
+  if (inputVal.startsWith('thundr://')) {
+    thundrPaths(inputVal);
   } else {
     launch(inputVal);
   }
@@ -119,15 +119,15 @@ startInput?.addEventListener('input', function () {
   startClearBtn.classList.toggle('hidden', this.value.length < 1);
 });
 
-function LunarPaths(path: string) {
+function lunarPaths(path: string) {
   let target = '';
-  if (path === 'lunar://apps') {
+  if (path === 'thundr://apps') {
     inputField.value = path;
     target = './ap';
-  } else if (path === 'lunar://games') {
+  } else if (path === 'thundr://games') {
     inputField.value = path;
     target = './gm';
-  } else if (path === 'lunar://settings') {
+  } else if (path === 'thundr://settings') {
     inputField.value = path;
     target = './s';
   } else {
